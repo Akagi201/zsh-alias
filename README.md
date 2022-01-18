@@ -5,6 +5,7 @@ Categorize my own zsh aliases
 ## Tools
 
 * [exa](exa.zsh): modern replacement for `ls`.
+* [proxy](proxy.zsh): terminal proxy config.
 
 ## Usage
 

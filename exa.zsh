@@ -1,10 +1,5 @@
-# general use
-alias ls='exa' # ls
-alias l='exa -lbF --git' # list, size, type, git
-alias ll='exa -lbGF --git' # long list
-alias llm='exa -lbGF --git --sort=modified' # long list, modified date sort
-alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale' # all list
-alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
-# speciality views
-alias lS='exa -1' # one column, just names
-alias lt='exa --tree --level=2' # tree
+alias ls='exa --group-directories-first' # ls
+alias l='exa -lbhF@ --git --group-directories-first --no-user --no-time --octal-permissions --icons' # list, size, type, git
+alias la='exa -lbhaF@ --git --group-directories-first --no-user --no-time --octal-permissions --icons'
+alias l1='exa -1 --group-directories-first' # one column, just names
+alias lt='exa --tree --level=2 --group-directories-first' # tree

@@ -6,6 +6,7 @@ Categorize my own zsh aliases
 
 * [exa](exa.zsh): modern replacement for `ls`.
 * [proxy](proxy.zsh): terminal proxy config.
+* [cargo](cargo.zsh): cargo command aliases.
 
 ## Usage
 

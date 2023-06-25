@@ -14,6 +14,7 @@ Categorize my own zsh aliases
 
 ```bash
 brew install exa
+brew install erdtree
 ```
 
 ### Install alias plugin

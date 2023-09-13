@@ -4,7 +4,7 @@ Categorize my own zsh aliases
 
 ## Tools
 
-* [exa](exa.zsh): modern replacement for `ls`.
+* [ls](ls.zsh): modern replacement for `ls`.
 * [proxy](proxy.zsh): terminal proxy config.
 * [cargo](cargo.zsh): cargo command aliases.
 
@@ -13,7 +13,7 @@ Categorize my own zsh aliases
 ### Install missing tools
 
 ```bash
-brew install exa
+brew install eza
 brew install erdtree
 ```
 

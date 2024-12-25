@@ -17,3 +17,6 @@ alias cgp='cargo publish'
 alias cgi='cargo install'
 alias cgui='cargo uninstall'
 alias cgbr='cargo build --release'
+rm_cargo_cache() {
+  rm -rf ~/.cargo/registry/index/* ~/.cargo/.package-cache
+}

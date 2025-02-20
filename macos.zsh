@@ -4,4 +4,5 @@ up() {
   brewup
   uvup
   rustup update
+  mise upgrade
 }

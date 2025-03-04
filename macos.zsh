@@ -3,6 +3,7 @@ alias uvup='uv self update'
 up() {
   brewup
   uvup
+  bun upgrade
   rustup update
   mise upgrade
 }

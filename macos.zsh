@@ -6,4 +6,5 @@ up() {
   bun upgrade
   rustup update
   mise upgrade
+  foundryup
 }

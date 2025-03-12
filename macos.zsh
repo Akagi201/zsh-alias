@@ -7,4 +7,5 @@ up() {
   rustup update
   mise upgrade
   foundryup
+  gcloud components update -q
 }

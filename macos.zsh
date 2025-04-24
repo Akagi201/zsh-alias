@@ -8,4 +8,5 @@ up() {
   mise upgrade
   foundryup
   gcloud components update -q
+  goose update
 }

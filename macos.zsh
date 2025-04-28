@@ -10,4 +10,5 @@ up() {
   gcloud components update -q
   goose update
   gh extension upgrade --all
+  agave-install update
 }

@@ -9,4 +9,5 @@ up() {
   foundryup
   gcloud components update -q
   goose update
+  gh extension upgrade --all
 }

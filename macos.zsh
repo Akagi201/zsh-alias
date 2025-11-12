@@ -11,5 +11,5 @@ up() {
   goose update
   gh extension upgrade --all
   agave-install update
-  uv tool upgrade
+  uv tool upgrade --all
 }

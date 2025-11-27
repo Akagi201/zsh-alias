@@ -7,6 +7,8 @@ Categorize my own zsh aliases
 * [ls](ls.zsh): modern replacement for `ls`.
 * [proxy](proxy.zsh): terminal proxy config.
 * [cargo](cargo.zsh): cargo command aliases.
+* [python](python.zsh): python and uv aliases.
+* [editor](editor.zsh): editor aliases.
 
 ## Usage
 

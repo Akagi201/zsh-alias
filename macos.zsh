@@ -7,7 +7,7 @@ alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 up() {
   brewup
   uvup
-  bun upgrade
+  curl -fsSL https://bun.com/install | bash
   rustup update
   mise upgrade
   foundryup
@@ -16,5 +16,5 @@ up() {
   gh extension upgrade --all
   agave-install update
   uv tool upgrade --all
-  cargo install --git https://github.com/leptos-rs/cargo-leptos --locked cargo-leptos
+  cargo install --force --git https://github.com/leptos-rs/cargo-leptos --locked cargo-leptos
 }

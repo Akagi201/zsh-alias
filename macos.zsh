@@ -9,6 +9,7 @@ up() {
   uvup
   curl -fsSL https://bun.com/install | bash
   rustup update
+  rustup toolchain list | grep -vE 'stable|nightly' | awk '{print $1}' | xargs rustup toolchain uninstall
   mise upgrade
   foundryup
   gcloud components update -q

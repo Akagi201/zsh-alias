@@ -4,6 +4,7 @@ alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
+alias fabric='fabric-ai'
 up() {
   brewup
   uvup

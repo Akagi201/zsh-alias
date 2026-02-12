@@ -18,5 +18,4 @@ up() {
   agave-install update
   uv tool upgrade --all
   npm update -g
-  cargo install --force --git https://github.com/leptos-rs/cargo-leptos --locked cargo-leptos
 }

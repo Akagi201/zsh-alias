@@ -18,4 +18,5 @@ up() {
   agave-install update
   uv tool upgrade --all
   npm update -g
+  proto upgrade
 }

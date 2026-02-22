@@ -19,5 +19,5 @@ up() {
   uv tool upgrade --all
   npm update -g
   proto upgrade
-  npx skills update
+  npx -y skills update
 }

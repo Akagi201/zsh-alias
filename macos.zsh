@@ -20,5 +20,7 @@ up() {
   uv tool upgrade --all
   npm update -g
   proto upgrade
+  proto outdated -c global --update --latest -y
+  proto install -c global -y
   npx -y skills update
 }

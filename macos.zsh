@@ -15,6 +15,7 @@ up() {
   gcloud components update -q
   goose update
   gh extension upgrade --all
+  fabric -U
   agave-install update
   uv tool upgrade --all
   npm update -g

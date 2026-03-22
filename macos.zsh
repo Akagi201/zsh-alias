@@ -19,6 +19,7 @@ up() {
   agave-install update
   uv tool upgrade --all
   npm update -g
+  gup update
   proto upgrade
   proto outdated -c global --update --latest -y
   proto install -c global -y

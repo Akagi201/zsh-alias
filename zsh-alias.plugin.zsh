@@ -7,4 +7,4 @@ source ${0:A:h}/editor.zsh
 source ${0:A:h}/python.zsh
 source ${0:A:h}/macos.zsh
 source ${0:A:h}/git.zsh
-source ${0:A:h}/claude.zsh
+source ${0:A:h}/code.zsh

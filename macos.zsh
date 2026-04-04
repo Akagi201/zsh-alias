@@ -5,6 +5,14 @@ alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true &&
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 alias fabric='fabric-ai'
+srsync() {
+    if [ "$#" -lt 2 ]; then
+        echo "Usage: srsync <source file/directory> <destination path>"
+        echo "Example: srsync ./config.yml user@host:/etc/config/"
+        return 1
+    fi
+    rsync -av --rsync-path="sudo rsync" "$@"
+}
 up() {
   brewup
   uvup

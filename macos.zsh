@@ -31,5 +31,5 @@ up() {
   bun update -g --latest
   proto outdated --config-mode global --update --latest --yes
   proto install --config-mode global
-  npx -y skills update
+  npx -y skills update -g
 }

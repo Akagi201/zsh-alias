@@ -1,4 +1,4 @@
-alias brewup='brew update && brew upgrade && brew upgrade --cask && brew cleanup'
+alias brewup='brew update && brew upgrade -y && brew upgrade -y --cask && brew cleanup'
 alias uvup='uv self update'
 alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'

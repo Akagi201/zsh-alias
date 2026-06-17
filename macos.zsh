@@ -14,6 +14,7 @@ srsync() {
     rsync -av --rsync-path="sudo rsync" "$@"
 }
 up() {
+  omz update
   brewup
   uvup
   curl -fsSL https://bun.com/install | bash

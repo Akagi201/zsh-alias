@@ -12,3 +12,12 @@ git-dirty-repos() {
         fi
     done
 }
+git-pull-all() {
+    for d in */; do
+        if [ -d "$d/.git" ]; then
+            branch=$(git -C "$d" rev-parse --abbrev-ref HEAD)
+            echo -e "\n===== 📂 $d [${branch}] ====="
+            git -C "$d" pull
+        fi
+    done
+}

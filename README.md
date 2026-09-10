@@ -14,9 +14,20 @@ Categorize my own zsh aliases
 
 ### Install missing tools
 
+macOS:
+
 ```bash
 brew install eza
 brew install erdtree
+```
+
+Linux:
+
+```bash
+# Debian/Ubuntu
+sudo apt install eza erdtree
+# 或用 Homebrew on Linux
+brew install eza erdtree
 ```
 
 ### Install alias plugin

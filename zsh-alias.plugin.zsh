@@ -5,9 +5,7 @@ source ${0:A:h}/cargo.zsh
 source ${0:A:h}/ai.zsh
 source ${0:A:h}/editor.zsh
 source ${0:A:h}/python.zsh
-# macOS 专属命令 (brew/defaults/dscacheutil/.app 路径)，仅在 macOS 上加载
-if [[ "$(uname -s)" == "Darwin" ]]; then
-  source ${0:A:h}/macos.zsh
-fi
+# Cross-platform upgrade commands (`up`, `brewup`, `archup`, ...), macOS + Arch Linux
+source ${0:A:h}/upgrade.sh
 source ${0:A:h}/git.zsh
 source ${0:A:h}/code.zsh

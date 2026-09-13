@@ -52,16 +52,16 @@ uvup() {
     uv self update
 }
 
-# Arch Linux: pacman + AUR helper (yay/paru) when available, plus flatpak.
+# Arch Linux: pacman + AUR helper (paru/yay) when available, plus flatpak.
 archup() {
-    if _upgrade_has yay; then
-        _upgrade_step "yay -Syu" yay -Syu
-    elif _upgrade_has paru; then
+    if _upgrade_has paru; then
         _upgrade_step "paru -Syu" paru -Syu
+    elif _upgrade_has yay; then
+        _upgrade_step "yay -Syu" yay -Syu
     elif _upgrade_has pacman; then
         _upgrade_step "pacman -Syu" sudo pacman -Syu
     else
-        echo "neither yay/paru/pacman found, skipping Arch system upgrade."
+        echo "neither paru/yay/pacman found, skipping Arch system upgrade."
     fi
     if _upgrade_has flatpak; then
         _upgrade_step "flatpak update" flatpak update -y
@@ -89,7 +89,7 @@ up() {
         _upgrade_step "brewup" brewup
         ;;
     Linux)
-        if _upgrade_is_arch || _upgrade_has pacman || _upgrade_has yay || _upgrade_has paru; then
+        if _upgrade_is_arch || _upgrade_has pacman || _upgrade_has paru || _upgrade_has yay; then
             _upgrade_step "archup" archup
         fi
         # Linuxbrew, if installed alongside pacman

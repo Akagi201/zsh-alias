@@ -35,6 +35,16 @@ Darwin)
 esac
 
 # --- package-manager upgrades ---
+# NOTE: `brewup`/`uvup` used to be aliases (see old macos.zsh). zsh expands
+# aliases at parse time, so `brewup() {` fails with "defining function based
+# on alias" if the old alias is still in memory (e.g. re-`source ~/.zshrc`
+# in the same shell after upgrading this file). Unalias first to make
+# (re-)sourcing idempotent on every platform.
+for _upgrade_name in brewup uvup archup up srsync; do
+    (( $+aliases[$_upgrade_name] )) && unalias $_upgrade_name
+done
+unset _upgrade_name
+
 # Homebrew (macOS, also works as Linuxbrew). Fixed: `brew upgrade` takes no -y flag.
 brewup() {
     if ! _upgrade_has brew; then
@@ -78,9 +88,12 @@ srsync() {
 }
 
 up() {
-    # 1. oh-my-zsh
+    # 1. oh-my-zsh (subshell: `omz update` exec's a new shell on success,
+    # which would otherwise replace this shell and abort `up`;
+    # `|| true` ignores failures so remaining steps always run)
     if _upgrade_has omz; then
-        _upgrade_step "omz update" omz update
+        echo "==> omz update"
+        ( omz update || true )
     fi
 
     # 2. OS-specific system packages

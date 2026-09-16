@@ -21,3 +21,24 @@ git-pull-all() {
         fi
     done
 }
+# 将存在未 push commit 的一级 Git 仓库逐个 push
+git-push-all() {
+    for d in */; do
+        if [ -d "$d/.git" ]; then
+            branch=$(git -C "$d" rev-parse --abbrev-ref HEAD)
+            echo -e "\n===== 📂 $d [${branch}] ====="
+            # 没有 upstream 时无法判断 ahead, 跳过并提示
+            if ! git -C "$d" rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
+                echo "⚠️  no upstream, skip (先手动: git -C \"$d\" push -u origin ${branch})"
+                continue
+            fi
+            ahead=$(git -C "$d" rev-list --count @{u}..HEAD)
+            if [ "$ahead" -gt 0 ]; then
+                echo "🚀 ${ahead} commit(s) to push..."
+                git -C "$d" push
+            else
+                echo "✅ already up to date"
+            fi
+        fi
+    done
+}
